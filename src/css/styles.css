@@ -56,7 +56,8 @@ body {
 }
 
 .search-inp::placeholder {
-  color: #FFF
+  color: #FFF;
+  background-color: transparent;
 }
 
 .search-inp:hover {

@@ -92,7 +92,7 @@ async function onLoadMore() {
   }
 }
 
-function getImages(query, page = 1) {
+async function getImages(query, page = 1) {
   showLoader(true);
   return axios
     .get('/', {
