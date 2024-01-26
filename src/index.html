@@ -13,9 +13,16 @@
 </head>
 
 <body>
-  <!-- <load="partials /header.html" /> -->
 
-  <a href="./gallery.html">Gallery</a>
+  <form class="search-form">
+    <input class="search-inp" type="text" name="query" placeholder="Search images...">
+    <button class="search-btn" type="submit">Search</button>
+  </form>
+
+  <ul class="gallery"></ul>
+
+  <button class="load-btn is-hidden" type="button">Load more</button>
+  <span class="loader"></span>
 
 
   <script type="module" src="./main.js"></script>
