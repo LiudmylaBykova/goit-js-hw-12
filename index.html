@@ -10,14 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
   
-  <script type="module" crossorigin src="/goit-js-hw-12/assets/styles-fe79c005.js"></script>
-  <link rel="stylesheet" href="/goit-js-hw-12/assets/styles-918d61a2.css">
+  <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-c145bea9.js">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-fd638ea2.css">
+  <link rel="stylesheet" href="/goit-js-hw-12/assets/index-918d61a2.css">
 </head>
 
 <body>
-  <!-- ENOENT: no such file or directory, open '/home/runner/work/goit-js-hw-12/goit-js-hw-12/src/partials /header.html' -->
 
-  <a href="./gallery.html">Gallery</a>
+  <form class="search-form">
+    <input class="search-inp" type="text" name="query" placeholder="Search images...">
+    <button class="search-btn" type="submit">Search</button>
+  </form>
+
+  <ul class="gallery"></ul>
+
+  <button class="load-btn is-hidden" type="button">Load more</button>
+  <span class="loader"></span>
 
 
   
