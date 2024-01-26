@@ -95,22 +95,18 @@ async function onLoadMore() {
 
 async function getImages(query, page = 1) {
   showLoader(true);
-  try {
-    const data = await axios.get('/', {
-      params: {
-        key: API_KEY,
-        q: query,
-        image_type: 'photo',
-        orientation: 'horizontal',
-        safesearch: true,
-        per_page: 40,
-        page,
-      },
-    });
-    return data.data;
-  } catch (error) {
-    console.log()(error);
-  }
+  const data = await axios.get('/', {
+    params: {
+      key: API_KEY,
+      q: query,
+      image_type: 'photo',
+      orientation: 'horizontal',
+      safesearch: true,
+      per_page: 40,
+      page,
+    },
+  });
+  return data.data;
 }
 
 function createMarkup(hits) {
