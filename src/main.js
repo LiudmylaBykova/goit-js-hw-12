@@ -17,9 +17,6 @@ const queryParams = {
   per_page: 40,
 };
 
-hideLoader();
-hideLoadMoreBtn();
-
 refs.form.addEventListener('submit', onSearch);
 async function onSearch(event) {
   event.preventDefault();
