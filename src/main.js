@@ -20,14 +20,14 @@ const queryParams = {
 refs.form.addEventListener('submit', onSearch);
 async function onSearch(event) {
   event.preventDefault();
+  hideLoadMoreBtn();
   refs.gallery.innerHTML = '';
   queryParams.page = 1;
   queryParams.query = refs.form.query.value.trim();
   if (!queryParams.query) {
     createMessage(
-      `The search field can't be empty! Please, enter your request!`
+      `The search field can't be empty😉! Please, enter your request!`
     );
-    hideLoadMoreBtn();
     return;
   }
   try {
@@ -42,7 +42,7 @@ async function onSearch(event) {
     } else {
       hideLoadMoreBtn();
       createMessage(
-        `Sorry, there are no images matching your search query. Please, try again!`
+        `Sorry, there are no images matching your search query🙃. Please, try again!`
       );
     }
     hideLoader();
@@ -53,7 +53,7 @@ async function onSearch(event) {
     if (queryParams.page === queryParams.maxPage) {
       hideLoadMoreBtn();
       createMessage(
-        "We're sorry, but you've reached the end of search results!"
+        "We're sorry, but you've reached the end of search results🙃!"
       );
     }
   }
@@ -76,7 +76,7 @@ async function onLoadMore() {
     if (queryParams.page === queryParams.maxPage) {
       hideLoadMoreBtn();
       createMessage(
-        "We're sorry, but you've reached the end of search results!"
+        "We're sorry, but you've reached the end of search results🙃!"
       );
     }
   }
