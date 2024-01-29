@@ -20,7 +20,6 @@ const queryParams = {
 refs.form.addEventListener('submit', onSearch);
 async function onSearch(event) {
   event.preventDefault();
-  hideLoader();
   refs.gallery.innerHTML = '';
   queryParams.page = 1;
   queryParams.query = refs.form.query.value.trim();
@@ -28,11 +27,11 @@ async function onSearch(event) {
     createMessage(
       `The search field can't be empty! Please, enter your request!`
     );
+    hideLoadMoreBtn();
     return;
   }
   try {
     showLoader();
-    hideLoadMoreBtn();
     const { hits, totalHits } = await getImages(queryParams);
     queryParams.maxPage = Math.ceil(totalHits / queryParams.per_page);
     createMarkup(hits, refs.gallery);
